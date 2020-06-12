@@ -52,7 +52,7 @@ class UsersController extends Controller
         $user['role_id'] = $request->role;
         $user['password'] = Hash::make($password);
         if ($request->file('foto')) {
-            $user['foto'] = $request->file('foto')->store('foto-profil');
+            $user['foto'] = $request->file('foto')->store('public');
         } else {
             $user['foto'] = 'default.jpg';
         }
@@ -128,7 +128,7 @@ class UsersController extends Controller
             if ($user->foto != 'default.jpg') {
                 File::delete(public_path('storage'.'/'.$user->foto));
             }
-            $data['foto'] = $request->file('foto')->store('foto-profil');
+            $data['foto'] = $request->file('foto')->store('public');
         }
         $user->update($data);
         return redirect()->back()->with('success', 'User berhasil diperbarui');
@@ -215,7 +215,7 @@ class UsersController extends Controller
             if ($user->foto != 'default.jpg') {
                 File::delete(public_path('storage'.'/'.$user->foto));
             }
-            $user->foto = $request->file('foto')->store('foto-profil');
+            $user->foto = $request->file('foto')->store('public');
         }
         $user->save();
         return redirect()->back()->with('success','Profil berhasil di perbarui');

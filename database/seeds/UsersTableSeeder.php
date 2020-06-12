@@ -18,7 +18,7 @@ class UsersTableSeeder extends Seeder
             'nama'      => 'Administrator',
             'nrp'       => '123456789',
             'foto'      => 'default.jpg',
-            'password'  => Hash::make('123456789')
+            'password'  => Hash::make('daniel')
         ]);
 
         DB::table('users')->insert([
@@ -26,7 +26,7 @@ class UsersTableSeeder extends Seeder
             'nama'      => 'Izzan',
             'nrp'       => '987654321',
             'foto'      => 'default.jpg',
-            'password'  => Hash::make('987654321')
+            'password'  => Hash::make('daniel')
         ]);
 
         DB::table('users')->insert([
@@ -34,7 +34,7 @@ class UsersTableSeeder extends Seeder
             'nama'      => 'Barep',
             'nrp'       => '112233445',
             'foto'      => 'default.jpg',
-            'password'  => Hash::make('barep123')
+            'password'  => Hash::make('daniel')
         ]);
 
         DB::table('users')->insert([
@@ -42,7 +42,7 @@ class UsersTableSeeder extends Seeder
             'nama'      => 'Bawul Ganteng',
             'nrp'       => '123987456',
             'foto'      => 'default.jpg',
-            'password'  => Hash::make('bawul123')
+            'password'  => Hash::make('daniel')
         ]);
     }
 }
