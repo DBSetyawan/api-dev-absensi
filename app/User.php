@@ -11,6 +11,7 @@ class User extends Authenticatable implements JWTSubject
 {
     use Notifiable;
 
+    public $timestamps = true;
 
     public function getJWTIdentifier()
     {
@@ -18,7 +19,15 @@ class User extends Authenticatable implements JWTSubject
     }
     public function getJWTCustomClaims()
     {
-        return [];
+        return [
+            'User' => [ 
+                'role_id' => $this->role_id,
+                'nama' => $this->nama,
+                'nrp' => $this->nrp,
+                'foto' => $this->foto,
+                'password' => $this->password
+             ]
+        ];
     }
     
     /**
@@ -27,7 +36,7 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $fillable = [
-        'role_id','nama', 'nrp', 'foto', 'password',
+        'role_id','nama', 'nrp', 'foto', 'password','token'
     ];
 
     /**
@@ -36,7 +45,7 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token','token'
     ];
 
     /**

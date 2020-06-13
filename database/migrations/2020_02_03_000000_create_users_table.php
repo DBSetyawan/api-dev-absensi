@@ -17,8 +17,9 @@ class CreateUsersTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('role_id');
             $table->string('nama', 32);
-            $table->char('nrp', 9)->unique();
+            $table->longText('nrp', 9)->unique();
             $table->text('foto');
+            $table->longText('token')->nullable();
             $table->string('password');
             $table->timestamps();
 

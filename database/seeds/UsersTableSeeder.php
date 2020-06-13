@@ -18,6 +18,7 @@ class UsersTableSeeder extends Seeder
             'nama'      => 'Administrator',
             'nrp'       => '123456789',
             'foto'      => 'default.jpg',
+            'token'     => NULL,
             'password'  => Hash::make('daniel')
         ]);
 
@@ -26,6 +27,7 @@ class UsersTableSeeder extends Seeder
             'nama'      => 'Izzan',
             'nrp'       => '987654321',
             'foto'      => 'default.jpg',
+            'token'     => NULL,
             'password'  => Hash::make('daniel')
         ]);
 
@@ -34,6 +36,7 @@ class UsersTableSeeder extends Seeder
             'nama'      => 'Barep',
             'nrp'       => '112233445',
             'foto'      => 'default.jpg',
+            'token'     => NULL,
             'password'  => Hash::make('daniel')
         ]);
 
@@ -42,6 +45,7 @@ class UsersTableSeeder extends Seeder
             'nama'      => 'Bawul Ganteng',
             'nrp'       => '123987456',
             'foto'      => 'default.jpg',
+            'token'     => NULL,
             'password'  => Hash::make('daniel')
         ]);
     }
